@@ -1,5 +1,7 @@
 # LearningQuest
 
+[Google Docs Link](https://docs.google.com/document/d/14MAwXfqTkW6aasYXOQcRW8u0hev5_iPX7vAshtz256o/edit?usp=sharing)
+
 ##### The Learning Quest will connect all the users to the main database, and would allow them to reuse the credentials on all applications developed by REDU Edu Network.
 ####
 ####
