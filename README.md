@@ -16,18 +16,18 @@ If one would observe above flow, the REDU developers will be using Primary APIs 
 1.	**[signUp_LQ]**, this API will be used to signup a user. In addition, to call this API it requires to pass following values,
 ```yaml
 {
-   “name”: “Eric”,
-   “email”: “eric@email.com”,
-   “password”: “123123123”,
-   “date_of_birth”: “00-00-0000” 	
+   â€œnameâ€: â€œEricâ€,
+   â€œemailâ€: â€œeric@email.comâ€,
+   â€œpasswordâ€: â€œ123123123â€,
+   â€œdate_of_birthâ€: â€œ00-00-0000â€ 	
 }
 ```
 ###### Providing correct values should return following outcome,
 
 ```yaml
 {
-   “status”: “200”,
-   “message”: “user registration successful”
+   â€œstatusâ€: â€œ200â€,
+   â€œmessageâ€: â€œuser registration successfulâ€
 }
 ```
 
@@ -35,8 +35,8 @@ If one would observe above flow, the REDU developers will be using Primary APIs 
 
 ```yaml
 {
-   “status”: “200”,
-   “message”: “user already registered”
+   â€œstatusâ€: â€œ200â€,
+   â€œmessageâ€: â€œuser already registeredâ€
 }
 ```
 
@@ -45,28 +45,28 @@ _____________________________________________________________________
 2.	**[login_LQ]**, calling this API requires passing of following credentials,
 ```yaml
 {
-   “email”: “eric@email.com”,
-   “password”: “123123123”
+   â€œemailâ€: â€œeric@email.comâ€,
+   â€œpasswordâ€: â€œ123123123â€
 }
 ```
 ###### If the credentials are correct, the outcome should be as following,
 
 ```yaml
 {
-   “status”: 200,
-   “message”: “user found”,
-   “user_id”: “22”,
-   “token”: “%$234wdsff1@”
+   â€œstatusâ€: 200,
+   â€œmessageâ€: â€œuser foundâ€,
+   â€œuser_idâ€: â€œ22â€,
+   â€œtokenâ€: â€œ%$234wdsff1@â€
 } 
 ```
 ###### Otherwise, if the user is not found or credentials are not provided correctly, the outcome should be as following,
 
 ```yaml
 {
-   “status”: 200,
-   “message”: “user not found”,
-   “user_id”: “n/a”,
-   “token”: “n/a”
+   â€œstatusâ€: 200,
+   â€œmessageâ€: â€œuser not foundâ€,
+   â€œuser_idâ€: â€œn/aâ€,
+   â€œtokenâ€: â€œn/aâ€
 }
 ```
 
@@ -75,8 +75,8 @@ _____________________________________________________________________
 3.	**[get_user_profile_LQ]**, to make a call upon this API function, passing of the following values is required,
 ```yaml
 {
-   “user_id”: “22”,
-   “token”: “%$234wdsff1@”
+   â€œuser_idâ€: â€œ22â€,
+   â€œtokenâ€: â€œ%$234wdsff1@â€
 }
 ```
 ###### If the user has not yet logged into his/her xumm account, it should return the outcome as following, 
@@ -86,15 +86,16 @@ _____________________________________________________________________
    "status": 200,
    	 "data": 
        {
-         “id”: “22”,
-         “name”: “Eric”,
-         “email”: “eric@email.com”,
-         “date_of_birth”: “00-00-0000”,
-         “xumm_account”: “n/a”,
+         â€œidâ€: â€œ22â€,
+         â€œnameâ€: â€œEricâ€,
+         â€œemailâ€: â€œeric@email.comâ€,
+         â€œdate_of_birthâ€: â€œ00-00-0000â€,
+         â€œxumm_accountâ€: â€œn/aâ€,
          "assets": [],
-         “date_created”: “2020-10-02 00:00:00”,
-         “date_updated”: “n/a”,
-         “last_login”: “2021-09-07 01:54:02”,
+         â€œdate_createdâ€: â€œ2020-10-02 00:00:00â€,
+         â€œdate_updatedâ€: â€œn/aâ€,
+         â€œlast_loginâ€: â€œ2021-09-07 01:54:02â€,
+ }
 }
 ```
 ###### If the user has already logged into his/her xumm account, it should return the outcome as following,
@@ -104,11 +105,11 @@ _____________________________________________________________________
    "status": 200,
    "data": 
       {
-         “id”: “22”,
-         “name”: “Eric”,
-         “email”: “eric@email.com”,
-         “date_of_birth”: “00-00-0000”,
-         “xumm_account”: “rDpw131ffoine34xxxxxxxxxxxxxxx43112a”,       
+         â€œidâ€: â€œ22â€,
+         â€œnameâ€: â€œEricâ€,
+         â€œemailâ€: â€œeric@email.comâ€,
+         â€œdate_of_birthâ€: â€œ00-00-0000â€,
+         â€œxumm_accountâ€: â€œrDpw131ffoine34xxxxxxxxxxxxxxx43112aâ€,       
          "assets":
          [
             {
@@ -117,8 +118,9 @@ _____________________________________________________________________
                "issuer": ""
             }
          ],
-         “date_created”: “2020-10-02 00:00:00”,
-         “date_updated”: “n/a”,
-         “last_login”: “2021-09-07 01:54:02”,
+         â€œdate_createdâ€: â€œ2020-10-02 00:00:00â€,
+         â€œdate_updatedâ€: â€œn/aâ€,
+         â€œlast_loginâ€: â€œ2021-09-07 01:54:02â€,
+ }
 }
 ```
